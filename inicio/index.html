@@ -3,42 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Para Quem Ligar? - Página Inicial</title>
-  <link rel="stylesheet" href="index.css">
+  <title>Para Quem Ligar - Página Inicial</title>
+  <link rel="stylesheet" href="inicio/index.css">
 </head>
 <body>
-  <!-- Cabeçalho -->
   <header>
-    <div class="logo">
-      <img src="../src/img/logo.png" alt="Logo Para Quem Ligar?" />
-      <h1>Para Quem Ligar?</h1>
-    </div>
-    <nav>
+    <nav aria-label="Navegação principal">
       <ul>
-        <li><a href="../emergencia/index.html">Emergência</a></li>
-        <li><a href="../sup/index.html">Aprender</a></li>
+        <li><a href="#sobre" aria-label="Saiba mais sobre nós">Sobre</a></li>
+        <li><a href="#servicos" aria-label="Conheça nossos serviços">Serviços</a></li>
+        <li><a href="#contato" aria-label="Entre em contato conosco">Contato</a></li>
       </ul>
     </nav>
   </header>
-
-  <!-- Seção de Introdução -->
+  
   <main>
-    <section class="intro">
-      <h2>Bem-vindo ao Para Quem Ligar?</h2>
-      <p>
-        Este site foi criado para ajudá-lo a agir rapidamente em situações de emergência.  
-        Saiba quando e para quem ligar para obter ajuda de forma eficiente.
-      </p>
-      <div class="actions">
-        <a href="../emergencia/index.html" class="btn">Acessar Números de Emergência</a>
-        <a href="../sup/index.html" class="btn secondary">Aprender Mais</a>
-      </div>
+    <section class="intro" id="intro">
+      <h1>Bem-vindo ao Para Quem Ligar</h1>
+      <p>Saiba como agir em emergências e encontrar os contatos certos.</p>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <p>Somos uma plataforma dedicada a fornecer informações confiáveis e rápidas para situações de emergência.</p>
+    </section>
+
+    <section id="servicos">
+      <h2>Serviços</h2>
+      <ul>
+        <li>Orientação em situações de emergência</li>
+        <li>Contatos úteis e confiáveis</li>
+        <li>Informações sobre primeiros socorros</li>
+      </ul>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Entre em contato pelo e-mail: <a href="mailto:contato@paraquemligar.com">contato@paraquemligar.com</a></p>
     </section>
   </main>
+
   <footer>
-    <p>© 2024 Para Quem Ligar? | Todos os direitos reservados.</p>
-    <p>Contato: paraquemligar@gmail.com</p>
+    <p>&copy; 2024 Para Quem Ligar - Todos os direitos reservados.</p>
   </footer>
-</body>
+
   <script src="inicio/index.js"></script>
-        </html>
+</body>
+</html>
