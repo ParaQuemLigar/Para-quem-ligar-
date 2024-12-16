@@ -8,11 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     intro.style.opacity = 1;
   }, 500);
 
-  // Mensagem de boas-vindas
-  setTimeout(() => {
-    alert("Bem-vindo ao Para Quem Ligar! Saiba como agir em emergências.");
-  }, 1000);
-
   // Rolagem suave para links do menu
   const navLinks = document.querySelectorAll("header nav ul li a");
 
