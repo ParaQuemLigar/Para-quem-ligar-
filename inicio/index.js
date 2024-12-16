@@ -1,30 +1,37 @@
-// Aguarda o carregamento completo da página
-document.addEventListener("DOMContentLoaded", () => {
-  // Animação de carregamento na introdução
+// Função para criar uma animação suave de rolagem
+function smoothScroll(targetId) {
+  const targetElement = document.querySelector(targetId);
+  if (targetElement) {
+    window.scrollTo({
+      top: targetElement.offsetTop - 60, // Compensa o cabeçalho fixo
+      behavior: "smooth",
+    });
+  }
+}
+
+// Função para animação de introdução
+function animateIntro() {
   const intro = document.querySelector(".intro");
-  intro.style.opacity = 0;
-  intro.style.transition = "opacity 1.5s ease-in-out";
-  setTimeout(() => {
+  if (intro) {
     intro.style.opacity = 1;
-  }, 500);
+  }
+}
 
-  // Rolagem suave para links do menu
+// Inicializar as funcionalidades
+function init() {
+  // Animação de introdução
+  animateIntro();
+
+  // Configurar a rolagem suave
   const navLinks = document.querySelectorAll("header nav ul li a");
-
   navLinks.forEach(link => {
     link.addEventListener("click", event => {
       event.preventDefault();
-      const targetId = link.getAttribute("href").replace("../", "").replace("index.html", "");
-      const targetElement = document.querySelector(`.${targetId}`);
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop,
-          behavior: "smooth"
-        });
-      } else {
-        // Redireciona caso o link seja externo à página inicial
-        window.location.href = link.getAttribute("href");
-      }
+      const targetId = link.getAttribute("href");
+      smoothScroll(targetId);
     });
   });
-});
+}
+
+// Inicializar tudo quando o DOM estiver pronto
+document.addEventListener("DOMContentLoaded", init);
